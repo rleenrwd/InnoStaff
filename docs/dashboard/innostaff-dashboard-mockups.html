@@ -1,9 +1,857 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>InnoStaff Dashboard Design Mockups</title>
-<style>
-:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#182d40;background:#f5f6f3;font-size:14px}*{box-sizing:border-box}body{margin:0}a{color:inherit}.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}.sidebar{background:#122b3d;color:#e4edf2;padding:28px 20px}.brand{font-size:26px;font-weight:750;letter-spacing:-1px}.tagline{font-size:12px;color:#aabfc9;margin:4px 0 25px}.nav a{display:block;text-decoration:none;border-radius:5px;padding:11px 10px;margin:4px 0;font-size:13px}.nav a:hover,.nav a:focus{background:#234656}.filters{border-top:1px solid #38505f;margin-top:25px;padding-top:14px}.filters label{display:block;font-size:11px;color:#c3d2db;margin:12px 0}.filters input,.filters select{display:block;width:100%;margin-top:5px;padding:8px;border-radius:4px;border:0;background:#e8eff2;color:#384d5c}.filters button{background:#76bcc0;color:#122b3d;width:100%;padding:10px;border:0;font-weight:700;border-radius:4px;margin-top:8px}.filters p{font-size:11px;line-height:1.5;color:#aabfc9}main{padding:28px 36px;min-width:0;max-width:1600px}.banner{display:flex;justify-content:space-between;gap:20px;color:#536978;font-size:12px;border-bottom:1px solid #dce2e5;padding-bottom:15px}.badge{background:#e2edec;color:#236264;padding:4px 9px;border-radius:4px}h1{font-size:30px;font-weight:700;letter-spacing:-.7px;margin:26px 0 7px}h2{font-size:17px;margin:26px 0 12px}.subtitle{color:#5c6d78;margin:0 0 17px}.context{font-size:12px;color:#5a6e7a;background:#eaf0f1;padding:10px 12px;border-radius:4px;margin-bottom:20px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:18px 0}.card{background:white;border:1px solid #dce3e5;padding:17px;border-radius:6px}.card span{font-size:12px;color:#5a6d78}.card strong{display:block;font-size:30px;margin:9px 0}.card small{font-size:10px;color:#788993}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.chart{background:white;border:1px solid #dce3e5;border-radius:6px;padding:18px;min-width:0}.chart-title{font-weight:650;margin-bottom:12px}.chart svg{display:block;width:100%;height:160px}.note{font-size:11px;color:#778893;margin:8px 0 0}.table-wrap{overflow:auto;border:1px solid #dce3e5;border-radius:5px;background:white}table{border-collapse:collapse;width:100%;text-align:left;font-size:12px}th{background:#e9eff1;font-weight:600;color:#49606e}th,td{padding:13px 15px;border-bottom:1px solid #e3e8eb}tr:last-child td{border:0}.notice{font-size:12px;color:#6b5d3e;line-height:1.6;margin-top:18px}.toolbar{display:flex;flex-wrap:wrap;gap:18px;align-items:end;margin:20px 0;font-size:12px}.toolbar label{display:grid;gap:8px}.toolbar input,.toolbar select{padding:9px;border:1px solid #cbd6db;background:#fff;border-radius:4px}.toolbar button{padding:10px;background:#d6e8e8;border:0;border-radius:4px}.finding{background:white;border:1px solid #dce3e5;border-radius:5px;padding:18px}.finding p{color:#607481;line-height:1.6}.screen{display:none}#overview{display:block}body:has(.screen:target) #overview{display:none}body:has(.screen:target) .screen:target{display:block}footer{font-size:11px;color:#7a8a94;margin-top:30px;border-top:1px solid #dce3e5;padding-top:14px}
-@media(max-width:950px){.layout{grid-template-columns:210px 1fr}main{padding:20px}.grid{grid-template-columns:1fr}h1{font-size:25px}}
-@media(max-width:640px){.layout{display:block}.sidebar{padding:18px}.nav{display:flex;flex-wrap:wrap}.nav a{padding:6px}.filters{display:none}main{padding:18px}.banner{display:block}}
-@media print{.layout{display:block}.sidebar{display:none}main{padding:0}.screen,body:has(.screen:target) #overview{display:block!important;break-before:page}.screen:first-of-type{break-before:auto}.banner{margin-bottom:15px}.chart{break-inside:avoid}.grid{grid-template-columns:1fr 1fr}}
-</style></head><body>
-<div class="layout"><aside class="sidebar"><div class="brand">InnoStaff<span style="color:#80c4c5">.</span></div><p class="tagline">WORKFORCE INTELLIGENCE</p><nav class="nav" aria-label="Mockup pages"><a href="#overview">Executive Overview</a><a href="#commute">Commute & Scheduling</a><a href="#experience">Job Experience & Career Mobility</a><a href="#explorer">Client & Role Explorer</a><a href="#findings">Findings & Recommendations</a></nav><div class="filters"><h2>Population filters</h2><label>Placement starts<input disabled value="Full dataset range"></label><label>Analysis cutoff<input disabled value="Dataset snapshot"></label><label>Role population<select disabled><option>Entry Operations</option></select></label><label>Client / site<select disabled><option>All clients and sites</option></select></label><label>Branch / cohort<select disabled><option>All branches and cohorts</option></select></label><label>Retention horizon<select disabled><option>90 days</option></select></label><button disabled>Apply filters</button><p>Design mockup. Filters and calculations are intentionally inactive.</p></div></aside><main><div class="banner"><span>InnoStaff Workforce Solutions</span><span class="badge">STATIC DESIGN · SYNTHETIC DATA ONLY</span></div><section class="screen" id="overview"><h1>Executive Overview</h1><p class="subtitle">Placement retention and hiring demand</p><p class="context">Entry Operations · Snapshot cutoff · 90-day horizon · All eligible selected cohorts</p><div class="cards"><div class="card"><span>Placements</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>90-day retention</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>Eligible placements</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>Replacement starts</span><strong>—</strong><small>SQL result pending implementation</small></div></div><div class="grid"><div class="chart" role="img" aria-label="Retention by placement-start month; illustrative shapes without results"><div class="chart-title">Retention by placement-start month</div><svg viewBox="0 0 600 150" aria-hidden="true"><path d="M35 15V125H580" fill="none" stroke="#d4dce3"/><path d="M40 100L130 78L220 87L310 53L400 66L490 39L575 49" fill="none" stroke="#167b80" stroke-width="4" stroke-dasharray="8 6"/></svg><p class="note">Illustrative layout only · no data or result implied</p></div><div class="chart" role="img" aria-label="Hiring purpose; illustrative shapes without results"><div class="chart-title">Hiring purpose</div><svg viewBox="0 0 600 150" aria-hidden="true"><path d="M35 15V125H580" fill="none" stroke="#d4dce3"/><g fill="#a7cdd0"><rect x="65" y="43" width="60" height="82"/><rect x="175" y="72" width="60" height="53"/><rect x="285" y="28" width="60" height="97"/><rect x="395" y="60" width="60" height="65"/><rect x="505" y="82" width="60" height="43"/></g></svg><p class="note">Illustrative layout only · no data or result implied</p></div></div><h2>Cohort comparisons</h2><div class="table-wrap"><table><thead><tr><th>Intake cohort</th><th>Eligible</th><th>Retained</th><th>Rate</th><th>Coverage</th></tr></thead><tbody><tr><td>Cohort label</td><td>—</td><td>—</td><td>—</td><td>Awaiting data</td></tr><tr><td>Cohort label</td><td>—</td><td>—</td><td>—</td><td>Awaiting data</td></tr></tbody></table></div><p class="notice">Retention means active on day H. Incomplete observation windows appear separately; conversions and transfers are classified distinctly.</p></section><section class="screen" id="commute"><h1>Commute & Scheduling</h1><p class="subtitle">Costs, expectations, and schedule fit</p><p class="context">Entry Operations · Snapshot cutoff · 90-day horizon · All eligible selected cohorts</p><div class="cards"><div class="card"><span>Observed commute burden</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>Paired assessments</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>Initial shift mismatch</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>Unresolved requests</span><strong>—</strong><small>SQL result pending implementation</small></div></div><div class="grid"><div class="chart" role="img" aria-label="Retention by estimated commute burden; illustrative shapes without results"><div class="chart-title">Retention by estimated commute burden</div><svg viewBox="0 0 600 150" aria-hidden="true"><path d="M35 15V125H580" fill="none" stroke="#d4dce3"/><g fill="#a7cdd0"><rect x="65" y="43" width="60" height="82"/><rect x="175" y="72" width="60" height="53"/><rect x="285" y="28" width="60" height="97"/><rect x="395" y="60" width="60" height="65"/><rect x="505" y="82" width="60" height="43"/></g></svg><p class="note">Illustrative layout only · no data or result implied</p></div><div class="chart" role="img" aria-label="Expected versus experienced duration; illustrative shapes without results"><div class="chart-title">Expected versus experienced duration</div><svg viewBox="0 0 600 150" aria-hidden="true"><path d="M35 15V125H580" fill="none" stroke="#d4dce3"/><g fill="#a7cdd0"><rect x="65" y="43" width="60" height="82"/><rect x="175" y="72" width="60" height="53"/><rect x="285" y="28" width="60" height="97"/><rect x="395" y="60" width="60" height="65"/><rect x="505" y="82" width="60" height="43"/></g></svg><p class="note">Illustrative layout only · no data or result implied</p></div></div><h2>Commute and shift interaction</h2><div class="table-wrap"><table><thead><tr><th>Shift</th><th>Burden band</th><th>Eligible</th><th>Retained</th><th>Rate</th></tr></thead><tbody><tr><td>Shift label</td><td>Cost band</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Shift label</td><td>Cost band</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div><p class="notice">Experienced commute comparisons use day-14 survivors with follow-up through day 90. Costs are estimates against gross compensation.</p></section><section class="screen" id="experience"><h1>Job Experience & Career Mobility</h1><p class="subtitle">Onboarding, satisfaction, and advancement</p><p class="context">Entry Operations · Snapshot cutoff · 90-day horizon · All eligible selected cohorts</p><div class="cards"><div class="card"><span>First-week training coverage</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>Early survey responses</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>Promotions</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>Client conversions</span><strong>—</strong><small>SQL result pending implementation</small></div></div><div class="grid"><div class="chart" role="img" aria-label="Reported expectation fit; illustrative shapes without results"><div class="chart-title">Reported expectation fit</div><svg viewBox="0 0 600 150" aria-hidden="true"><path d="M35 15V125H580" fill="none" stroke="#d4dce3"/><g fill="#a7cdd0"><rect x="65" y="43" width="60" height="82"/><rect x="175" y="72" width="60" height="53"/><rect x="285" y="28" width="60" height="97"/><rect x="395" y="60" width="60" height="65"/><rect x="505" y="82" width="60" height="43"/></g></svg><p class="note">Illustrative layout only · no data or result implied</p></div><div class="chart" role="img" aria-label="Career-goal alignment; illustrative shapes without results"><div class="chart-title">Career-goal alignment</div><svg viewBox="0 0 600 150" aria-hidden="true"><path d="M35 15V125H580" fill="none" stroke="#d4dce3"/><g fill="#a7cdd0"><rect x="65" y="43" width="60" height="82"/><rect x="175" y="72" width="60" height="53"/><rect x="285" y="28" width="60" height="97"/><rect x="395" y="60" width="60" height="65"/><rect x="505" y="82" width="60" height="43"/></g></svg><p class="note">Illustrative layout only · no data or result implied</p></div></div><h2>Observation windows</h2><div class="table-wrap"><table><thead><tr><th>Analysis</th><th>Measurement cutoff</th><th>Outcome</th><th>Included count</th></tr></thead><tbody><tr><td>Training</td><td>Day 7</td><td>Active day 30</td><td>—</td></tr><tr><td>Early experience</td><td>Day 14</td><td>Active day 90</td><td>—</td></tr><tr><td>Internal promotion</td><td>Day 180</td><td>Active day 270</td><td>—</td></tr></tbody></table></div><p class="notice">Later advancement does not explain earlier survival. Client employment after direct-hire conversion is unobserved.</p></section><section class="screen" id="explorer"><h1>Client & Role Explorer</h1><p class="subtitle">Comparable groups with visible denominators</p><p class="context">Entry Operations · Snapshot cutoff · 90-day horizon · All eligible selected cohorts</p><div class="toolbar"><label>Group by <select disabled><option>Client</option></select></label><span>Default order: eligible placements descending</span></div><div class="chart" role="img" aria-label="Selected comparison groups; illustrative shapes without results"><div class="chart-title">Selected comparison groups</div><svg viewBox="0 0 600 150" aria-hidden="true"><path d="M35 15V125H580" fill="none" stroke="#d4dce3"/><g fill="#a7cdd0"><rect x="65" y="43" width="60" height="82"/><rect x="175" y="72" width="60" height="53"/><rect x="285" y="28" width="60" height="97"/><rect x="395" y="60" width="60" height="65"/><rect x="505" y="82" width="60" height="43"/></g></svg><p class="note">Illustrative layout only · no data or result implied</p></div><h2>Comparison detail</h2><div class="table-wrap"><table><thead><tr><th>Group</th><th>Placements</th><th>Eligible</th><th>Retained</th><th>Rate</th><th>Sample note</th></tr></thead><tbody><tr><td>Group label</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Awaiting data</td></tr><tr><td>Group label</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Awaiting data</td></tr><tr><td>Group label</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Awaiting data</td></tr></tbody></table></div><p class="notice">Groups with fewer than 30 eligible placements are labeled Small sample. No employer quality ranking is implied.</p></section><section class="screen" id="findings"><h1>Findings & Recommendations</h1><p class="subtitle">Evidence, modeled costs, and hypothetical scenarios</p><p class="context">Entry Operations · Snapshot cutoff · 90-day horizon · All eligible selected cohorts</p><h2>Findings supported by SQL</h2><div class="finding"><strong>Finding pending validated analysis</strong><p>Final narrative will cite the investigation, parameters, population, sample counts, and limitations.</p></div><h2>Hypothetical retention scenario</h2><div class="toolbar"><label>Assumed improvement <input disabled value="0 percentage points"></label><label>Total intervention cost <input disabled value="USD 0"></label><button disabled>Calculate in SQL</button></div><div class="cards"><div class="card"><span>Modeled avoided exits</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>Gross modeled savings</span><strong>—</strong><small>SQL result pending implementation</small></div><div class="card"><span>Net modeled benefit</span><strong>—</strong><small>SQL result pending implementation</small></div></div><h2>Operational recommendations</h2><div class="table-wrap"><table><thead><tr><th>Action</th><th>Supporting evidence</th><th>Follow-up KPI</th></tr></thead><tbody><tr><td>Defined after investigation</td><td>SQL output and limitations</td><td>Metric to monitor</td></tr></tbody></table></div><p class="notice">Scenario estimates are hypothetical, not measured intervention effects. Replacement-cost assumptions and coverage will be disclosed.</p></section><footer>Planning artifact only. Placeholder values and chart shapes do not represent results. Use the page links to review all five layouts. Print displays all pages.</footer></main></div></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>InnoStaff Dashboard Design Mockups</title>
+    <style>
+      :root {
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          sans-serif;
+        color: #182d40;
+        background: #f5f6f3;
+        font-size: 14px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      a {
+        color: inherit;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        min-height: 100vh;
+      }
+      .sidebar {
+        background: #122b3d;
+        color: #e4edf2;
+        padding: 28px 20px;
+      }
+      .brand {
+        font-size: 26px;
+        font-weight: 750;
+        letter-spacing: -1px;
+      }
+      .tagline {
+        font-size: 12px;
+        color: #aabfc9;
+        margin: 4px 0 25px;
+      }
+      .nav a {
+        display: block;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 11px 10px;
+        margin: 4px 0;
+        font-size: 13px;
+      }
+      .nav a:hover,
+      .nav a:focus {
+        background: #234656;
+      }
+      .filters {
+        border-top: 1px solid #38505f;
+        margin-top: 25px;
+        padding-top: 14px;
+      }
+      .filters label {
+        display: block;
+        font-size: 11px;
+        color: #c3d2db;
+        margin: 12px 0;
+      }
+      .filters input,
+      .filters select {
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+        padding: 8px;
+        border-radius: 4px;
+        border: 0;
+        background: #e8eff2;
+        color: #384d5c;
+      }
+      .filters button {
+        background: #76bcc0;
+        color: #122b3d;
+        width: 100%;
+        padding: 10px;
+        border: 0;
+        font-weight: 700;
+        border-radius: 4px;
+        margin-top: 8px;
+      }
+      .filters p {
+        font-size: 11px;
+        line-height: 1.5;
+        color: #aabfc9;
+      }
+      main {
+        padding: 28px 36px;
+        min-width: 0;
+        max-width: 1600px;
+      }
+      .banner {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        color: #536978;
+        font-size: 12px;
+        border-bottom: 1px solid #dce2e5;
+        padding-bottom: 15px;
+      }
+      .badge {
+        background: #e2edec;
+        color: #236264;
+        padding: 4px 9px;
+        border-radius: 4px;
+      }
+      h1 {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: -0.7px;
+        margin: 26px 0 7px;
+      }
+      h2 {
+        font-size: 17px;
+        margin: 26px 0 12px;
+      }
+      .subtitle {
+        color: #5c6d78;
+        margin: 0 0 17px;
+      }
+      .context {
+        font-size: 12px;
+        color: #5a6e7a;
+        background: #eaf0f1;
+        padding: 10px 12px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 14px;
+        margin: 18px 0;
+      }
+      .card {
+        background: white;
+        border: 1px solid #dce3e5;
+        padding: 17px;
+        border-radius: 6px;
+      }
+      .card span {
+        font-size: 12px;
+        color: #5a6d78;
+      }
+      .card strong {
+        display: block;
+        font-size: 30px;
+        margin: 9px 0;
+      }
+      .card small {
+        font-size: 10px;
+        color: #788993;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .chart {
+        background: white;
+        border: 1px solid #dce3e5;
+        border-radius: 6px;
+        padding: 18px;
+        min-width: 0;
+      }
+      .chart-title {
+        font-weight: 650;
+        margin-bottom: 12px;
+      }
+      .chart svg {
+        display: block;
+        width: 100%;
+        height: 160px;
+      }
+      .note {
+        font-size: 11px;
+        color: #778893;
+        margin: 8px 0 0;
+      }
+      .table-wrap {
+        overflow: auto;
+        border: 1px solid #dce3e5;
+        border-radius: 5px;
+        background: white;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: left;
+        font-size: 12px;
+      }
+      th {
+        background: #e9eff1;
+        font-weight: 600;
+        color: #49606e;
+      }
+      th,
+      td {
+        padding: 13px 15px;
+        border-bottom: 1px solid #e3e8eb;
+      }
+      tr:last-child td {
+        border: 0;
+      }
+      .notice {
+        font-size: 12px;
+        color: #6b5d3e;
+        line-height: 1.6;
+        margin-top: 18px;
+      }
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        align-items: end;
+        margin: 20px 0;
+        font-size: 12px;
+      }
+      .toolbar label {
+        display: grid;
+        gap: 8px;
+      }
+      .toolbar input,
+      .toolbar select {
+        padding: 9px;
+        border: 1px solid #cbd6db;
+        background: #fff;
+        border-radius: 4px;
+      }
+      .toolbar button {
+        padding: 10px;
+        background: #d6e8e8;
+        border: 0;
+        border-radius: 4px;
+      }
+      .finding {
+        background: white;
+        border: 1px solid #dce3e5;
+        border-radius: 5px;
+        padding: 18px;
+      }
+      .finding p {
+        color: #607481;
+        line-height: 1.6;
+      }
+      .screen {
+        display: none;
+      }
+      #overview {
+        display: block;
+      }
+      body:has(.screen:target) #overview {
+        display: none;
+      }
+      body:has(.screen:target) .screen:target {
+        display: block;
+      }
+      footer {
+        font-size: 11px;
+        color: #7a8a94;
+        margin-top: 30px;
+        border-top: 1px solid #dce3e5;
+        padding-top: 14px;
+      }
+      @media (max-width: 950px) {
+        .layout {
+          grid-template-columns: 210px 1fr;
+        }
+        main {
+          padding: 20px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 25px;
+        }
+      }
+      @media (max-width: 640px) {
+        .layout {
+          display: block;
+        }
+        .sidebar {
+          padding: 18px;
+        }
+        .nav {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .nav a {
+          padding: 6px;
+        }
+        .filters {
+          display: none;
+        }
+        main {
+          padding: 18px;
+        }
+        .banner {
+          display: block;
+        }
+      }
+      @media print {
+        .layout {
+          display: block;
+        }
+        .sidebar {
+          display: none;
+        }
+        main {
+          padding: 0;
+        }
+        .screen,
+        body:has(.screen:target) #overview {
+          display: block !important;
+          break-before: page;
+        }
+        .screen:first-of-type {
+          break-before: auto;
+        }
+        .banner {
+          margin-bottom: 15px;
+        }
+        .chart {
+          break-inside: avoid;
+        }
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="brand">InnoStaff<span style="color: #80c4c5">.</span></div>
+        <p class="tagline">WORKFORCE INTELLIGENCE</p>
+        <nav class="nav" aria-label="Mockup pages">
+          <a href="#overview">Executive Overview</a
+          ><a href="#commute">Commute & Scheduling</a
+          ><a href="#experience">Job Experience & Career Mobility</a
+          ><a href="#explorer">Client & Role Explorer</a
+          ><a href="#findings">Findings & Recommendations</a>
+        </nav>
+        <div class="filters">
+          <h2>Population filters</h2>
+          <label
+            >Placement starts<input
+              disabled
+              value="Full dataset range" /></label
+          ><label
+            >Analysis cutoff<input disabled value="Dataset snapshot" /></label
+          ><label
+            >Role population<select disabled>
+              <option>Entry Operations</option>
+            </select></label
+          ><label
+            >Client / site<select disabled>
+              <option>All clients and sites</option>
+            </select></label
+          ><label
+            >Branch / cohort<select disabled>
+              <option>All branches and cohorts</option>
+            </select></label
+          ><label
+            >Retention horizon<select disabled>
+              <option>90 days</option>
+            </select></label
+          ><button disabled>Apply filters</button>
+          <p>
+            Design mockup. Filters and calculations are intentionally inactive.
+          </p>
+        </div>
+      </aside>
+      <main>
+        <div class="banner">
+          <span>InnoStaff Workforce Solutions</span
+          ><span class="badge">STATIC DESIGN · SYNTHETIC DATA ONLY</span>
+        </div>
+        <section class="screen" id="overview">
+          <h1>Executive Overview</h1>
+          <p class="subtitle">Placement retention and hiring demand</p>
+          <p class="context">
+            Entry Operations · Snapshot cutoff · 90-day horizon · All eligible
+            selected cohorts
+          </p>
+          <div class="cards">
+            <div class="card">
+              <span>Placements</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>90-day retention</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>Eligible placements</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>Replacement starts</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+          </div>
+          <div class="grid">
+            <div
+              class="chart"
+              role="img"
+              aria-label="Retention by placement-start month; illustrative shapes without results"
+            >
+              <div class="chart-title">Retention by placement-start month</div>
+              <svg viewBox="0 0 600 150" aria-hidden="true">
+                <path d="M35 15V125H580" fill="none" stroke="#d4dce3" />
+                <path
+                  d="M40 100L130 78L220 87L310 53L400 66L490 39L575 49"
+                  fill="none"
+                  stroke="#167b80"
+                  stroke-width="4"
+                  stroke-dasharray="8 6"
+                />
+              </svg>
+              <p class="note">
+                Illustrative layout only · no data or result implied
+              </p>
+            </div>
+            <div
+              class="chart"
+              role="img"
+              aria-label="Hiring purpose; illustrative shapes without results"
+            >
+              <div class="chart-title">Hiring purpose</div>
+              <svg viewBox="0 0 600 150" aria-hidden="true">
+                <path d="M35 15V125H580" fill="none" stroke="#d4dce3" />
+                <g fill="#a7cdd0">
+                  <rect x="65" y="43" width="60" height="82" />
+                  <rect x="175" y="72" width="60" height="53" />
+                  <rect x="285" y="28" width="60" height="97" />
+                  <rect x="395" y="60" width="60" height="65" />
+                  <rect x="505" y="82" width="60" height="43" />
+                </g>
+              </svg>
+              <p class="note">
+                Illustrative layout only · no data or result implied
+              </p>
+            </div>
+          </div>
+          <h2>Cohort comparisons</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Intake cohort</th>
+                  <th>Eligible</th>
+                  <th>Retained</th>
+                  <th>Rate</th>
+                  <th>Coverage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cohort label</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>Awaiting data</td>
+                </tr>
+                <tr>
+                  <td>Cohort label</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>Awaiting data</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="notice">
+            Retention means active on day H. Incomplete observation windows
+            appear separately; conversions and transfers are classified
+            distinctly.
+          </p>
+        </section>
+        <section class="screen" id="commute">
+          <h1>Commute & Scheduling</h1>
+          <p class="subtitle">Costs, expectations, and schedule fit</p>
+          <p class="context">
+            Entry Operations · Snapshot cutoff · 90-day horizon · All eligible
+            selected cohorts
+          </p>
+          <div class="cards">
+            <div class="card">
+              <span>Observed commute burden</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>Paired assessments</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>Initial shift mismatch</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>Unresolved requests</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+          </div>
+          <div class="grid">
+            <div
+              class="chart"
+              role="img"
+              aria-label="Retention by estimated commute burden; illustrative shapes without results"
+            >
+              <div class="chart-title">
+                Retention by estimated commute burden
+              </div>
+              <svg viewBox="0 0 600 150" aria-hidden="true">
+                <path d="M35 15V125H580" fill="none" stroke="#d4dce3" />
+                <g fill="#a7cdd0">
+                  <rect x="65" y="43" width="60" height="82" />
+                  <rect x="175" y="72" width="60" height="53" />
+                  <rect x="285" y="28" width="60" height="97" />
+                  <rect x="395" y="60" width="60" height="65" />
+                  <rect x="505" y="82" width="60" height="43" />
+                </g>
+              </svg>
+              <p class="note">
+                Illustrative layout only · no data or result implied
+              </p>
+            </div>
+            <div
+              class="chart"
+              role="img"
+              aria-label="Expected versus experienced duration; illustrative shapes without results"
+            >
+              <div class="chart-title">
+                Expected versus experienced duration
+              </div>
+              <svg viewBox="0 0 600 150" aria-hidden="true">
+                <path d="M35 15V125H580" fill="none" stroke="#d4dce3" />
+                <g fill="#a7cdd0">
+                  <rect x="65" y="43" width="60" height="82" />
+                  <rect x="175" y="72" width="60" height="53" />
+                  <rect x="285" y="28" width="60" height="97" />
+                  <rect x="395" y="60" width="60" height="65" />
+                  <rect x="505" y="82" width="60" height="43" />
+                </g>
+              </svg>
+              <p class="note">
+                Illustrative layout only · no data or result implied
+              </p>
+            </div>
+          </div>
+          <h2>Commute and shift interaction</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Shift</th>
+                  <th>Burden band</th>
+                  <th>Eligible</th>
+                  <th>Retained</th>
+                  <th>Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Shift label</td>
+                  <td>Cost band</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Shift label</td>
+                  <td>Cost band</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="notice">
+            Experienced commute comparisons use day-14 survivors with follow-up
+            through day 90. Costs are estimates against gross compensation.
+          </p>
+        </section>
+        <section class="screen" id="experience">
+          <h1>Job Experience & Career Mobility</h1>
+          <p class="subtitle">Onboarding, satisfaction, and advancement</p>
+          <p class="context">
+            Entry Operations · Snapshot cutoff · 90-day horizon · All eligible
+            selected cohorts
+          </p>
+          <div class="cards">
+            <div class="card">
+              <span>First-week training coverage</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>Early survey responses</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>Promotions</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>Client conversions</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+          </div>
+          <div class="grid">
+            <div
+              class="chart"
+              role="img"
+              aria-label="Reported expectation fit; illustrative shapes without results"
+            >
+              <div class="chart-title">Reported expectation fit</div>
+              <svg viewBox="0 0 600 150" aria-hidden="true">
+                <path d="M35 15V125H580" fill="none" stroke="#d4dce3" />
+                <g fill="#a7cdd0">
+                  <rect x="65" y="43" width="60" height="82" />
+                  <rect x="175" y="72" width="60" height="53" />
+                  <rect x="285" y="28" width="60" height="97" />
+                  <rect x="395" y="60" width="60" height="65" />
+                  <rect x="505" y="82" width="60" height="43" />
+                </g>
+              </svg>
+              <p class="note">
+                Illustrative layout only · no data or result implied
+              </p>
+            </div>
+            <div
+              class="chart"
+              role="img"
+              aria-label="Career-goal alignment; illustrative shapes without results"
+            >
+              <div class="chart-title">Career-goal alignment</div>
+              <svg viewBox="0 0 600 150" aria-hidden="true">
+                <path d="M35 15V125H580" fill="none" stroke="#d4dce3" />
+                <g fill="#a7cdd0">
+                  <rect x="65" y="43" width="60" height="82" />
+                  <rect x="175" y="72" width="60" height="53" />
+                  <rect x="285" y="28" width="60" height="97" />
+                  <rect x="395" y="60" width="60" height="65" />
+                  <rect x="505" y="82" width="60" height="43" />
+                </g>
+              </svg>
+              <p class="note">
+                Illustrative layout only · no data or result implied
+              </p>
+            </div>
+          </div>
+          <h2>Observation windows</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Analysis</th>
+                  <th>Measurement cutoff</th>
+                  <th>Outcome</th>
+                  <th>Included count</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Training</td>
+                  <td>Day 7</td>
+                  <td>Active day 30</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Early experience</td>
+                  <td>Day 14</td>
+                  <td>Active day 90</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Internal promotion</td>
+                  <td>Day 180</td>
+                  <td>Active day 270</td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="notice">
+            Later advancement does not explain earlier survival. Client
+            employment after direct-hire conversion is unobserved.
+          </p>
+        </section>
+        <section class="screen" id="explorer">
+          <h1>Client & Role Explorer</h1>
+          <p class="subtitle">Comparable groups with visible denominators</p>
+          <p class="context">
+            Entry Operations · Snapshot cutoff · 90-day horizon · All eligible
+            selected cohorts
+          </p>
+          <div class="toolbar">
+            <label
+              >Group by
+              <select disabled>
+                <option>Client</option>
+              </select></label
+            ><span>Default order: eligible placements descending</span>
+          </div>
+          <div
+            class="chart"
+            role="img"
+            aria-label="Selected comparison groups; illustrative shapes without results"
+          >
+            <div class="chart-title">Selected comparison groups</div>
+            <svg viewBox="0 0 600 150" aria-hidden="true">
+              <path d="M35 15V125H580" fill="none" stroke="#d4dce3" />
+              <g fill="#a7cdd0">
+                <rect x="65" y="43" width="60" height="82" />
+                <rect x="175" y="72" width="60" height="53" />
+                <rect x="285" y="28" width="60" height="97" />
+                <rect x="395" y="60" width="60" height="65" />
+                <rect x="505" y="82" width="60" height="43" />
+              </g>
+            </svg>
+            <p class="note">
+              Illustrative layout only · no data or result implied
+            </p>
+          </div>
+          <h2>Comparison detail</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Group</th>
+                  <th>Placements</th>
+                  <th>Eligible</th>
+                  <th>Retained</th>
+                  <th>Rate</th>
+                  <th>Sample note</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Group label</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>Awaiting data</td>
+                </tr>
+                <tr>
+                  <td>Group label</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>Awaiting data</td>
+                </tr>
+                <tr>
+                  <td>Group label</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>Awaiting data</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="notice">
+            Groups with fewer than 30 eligible placements are labeled Small
+            sample. No employer quality ranking is implied.
+          </p>
+        </section>
+        <section class="screen" id="findings">
+          <h1>Findings & Recommendations</h1>
+          <p class="subtitle">
+            Evidence, modeled costs, and hypothetical scenarios
+          </p>
+          <p class="context">
+            Entry Operations · Snapshot cutoff · 90-day horizon · All eligible
+            selected cohorts
+          </p>
+          <h2>Findings supported by SQL</h2>
+          <div class="finding">
+            <strong>Finding pending validated analysis</strong>
+            <p>
+              Final narrative will cite the investigation, parameters,
+              population, sample counts, and limitations.
+            </p>
+          </div>
+          <h2>Hypothetical retention scenario</h2>
+          <div class="toolbar">
+            <label
+              >Assumed improvement
+              <input disabled value="0 percentage points" /></label
+            ><label
+              >Total intervention cost <input disabled value="USD 0" /></label
+            ><button disabled>Calculate in SQL</button>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <span>Modeled avoided exits</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>Gross modeled savings</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+            <div class="card">
+              <span>Net modeled benefit</span><strong>—</strong
+              ><small>SQL result pending implementation</small>
+            </div>
+          </div>
+          <h2>Operational recommendations</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Action</th>
+                  <th>Supporting evidence</th>
+                  <th>Follow-up KPI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Defined after investigation</td>
+                  <td>SQL output and limitations</td>
+                  <td>Metric to monitor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="notice">
+            Scenario estimates are hypothetical, not measured intervention
+            effects. Replacement-cost assumptions and coverage will be
+            disclosed.
+          </p>
+        </section>
+        <footer>
+          Planning artifact only. Placeholder values and chart shapes do not
+          represent results. Use the page links to review all five layouts.
+          Print displays all pages.
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
