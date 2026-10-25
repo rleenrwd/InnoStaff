@@ -3,7 +3,7 @@
 **Version:** 0.1  
 **Status:** Draft for review  
 **Project:** InnoStaff  
-**Suggested repository location:** `docs/innostaff-requirements-and-acceptance-criteria.md`
+**Suggested repository location:** `docs/requirements/innostaff-requirements-and-acceptance-criteria.md`
 
 ## 1 Purpose
 

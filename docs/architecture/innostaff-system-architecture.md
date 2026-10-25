@@ -35,7 +35,7 @@ flowchart TD
 
 ## Database organization and loading
 
-Use one SQL Server database and the dbo schema. Keep database scripts directly in database/ with ordered names. Separate table definitions from reporting procedures and indexes when doing so improves readability; no per-table folder hierarchy is necessary.
+Use one SQL Server database and the dbo schema. Organize database scripts under database/schema/, database/indexes/, database/views/, and database/procedures/. Keep constraints with their table definitions and use ordered filenames where setup dependencies require them.
 
 Load reference tables before dependent tables. Generate stable integer IDs so cross-references can be checked before ingestion. Where self-references or cycles require it, insert base placement rows with nullable chain references first, then update references in a transaction. Load exit and event records afterward and run cross-table consistency checks before exposing the dataset as ready.
 
@@ -68,4 +68,4 @@ If practical, deploy Streamlit backed by Azure SQL Database with restricted data
 - A fixed historical snapshot makes results reproducible. It does not demonstrate live ingestion, concurrent staffing updates, or production availability.
 - Streamlit supplies an appropriate presentation surface without duplicating the work of a full frontend project.
 
-See [Database Design](innostaff-database-design-and-data-dictionary.md), [Investigation Plan](innostaff-investigation-plan.md), and [Testing and Performance Plan](innostaff-testing-and-performance-plan.md).
+See [Database Design](../database/innostaff-database-design-and-data-dictionary.md), [Investigation Plan](../investigations/innostaff-investigation-plan.md), and [Testing and Performance Plan](../testing/innostaff-testing-and-performance-plan.md).

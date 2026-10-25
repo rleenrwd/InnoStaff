@@ -316,7 +316,7 @@ Begin with PK and unique-key indexes plus justified foreign-key access indexes. 
 
 Reporting views expose one-row-per-placement dimensions and correctly aggregated child facts. Parameterized procedures calculate retention and filtered reports. Views do not accept parameters; procedures receive cutoff, start range, threshold, and segment filters. Never join all raw one-to-many tables before aggregating: it would multiply observations.
 
-Metric formulas and event-time selection are authoritative in [Investigation Plan](innostaff-investigation-plan.md). Setup and test sequencing are in [Development and Delivery Plan](innostaff-development-and-delivery-plan.md).
+Metric formulas and event-time selection are authoritative in [Investigation Plan](../investigations/innostaff-investigation-plan.md). Setup and test sequencing are in [Development and Delivery Plan](../development/innostaff-development-and-delivery-plan.md).
 
 ## Implementation review gate
 

@@ -105,4 +105,4 @@ Initial configured ranges may be USD 200–1,500 per recruitment and USD 50–60
 
 Generation passes only when all keys, row-level ranges, cross-table consistency, and chronology checks pass. Compare repeated outputs by logical record hashes. Verify presence of all required categories and enough eligible observations for all three retention horizons and the career-mobility landmark. Record insufficient segments transparently rather than adding fake records to satisfy a chart.
 
-Full data loading and benchmark execution remain future implementation steps. See [Testing and Performance Plan](innostaff-testing-and-performance-plan.md).
+Full data loading and benchmark execution remain future implementation steps. See [Testing and Performance Plan](../testing/innostaff-testing-and-performance-plan.md).

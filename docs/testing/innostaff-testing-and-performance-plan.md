@@ -6,7 +6,7 @@
 
 Verify database integrity, analytical correctness, reproducible data, and honest performance evidence. Tests focus on failure-prone business rules and independently known answers. Full-size benchmarks demonstrate local SQL engineering; CI verifies correctness on small data.
 
-Requirements are defined in [Requirements and Acceptance Criteria](innostaff-requirements-and-acceptance-criteria.md). Metric semantics are defined in [Investigation Plan](innostaff-investigation-plan.md).
+Requirements are defined in [Requirements and Acceptance Criteria](../requirements/innostaff-requirements-and-acceptance-criteria.md). Metric semantics are defined in [Investigation Plan](../investigations/innostaff-investigation-plan.md).
 
 ## Test environments and layers
 

@@ -10,17 +10,42 @@ Use working for development and preserve main as the release branch. Make focuse
 
 ## Repository structure
 
-Keep these top-level areas and add internal folders only when contents justify them:
+Use the agreed structure below. Only documentation and the mockup are included in this package; implementation files are created as development progresses:
 
 ```text
 InnoStaff/
   database/
+    schema/
+    indexes/
+    views/
+    procedures/
   generator/
+    config/
+    output/
   analysis/
   dashboard/
+    app.py
+    pages/
+    components/
   tests/
+    fixtures/
+    sql/
+    python/
   performance/
+    case-01/
+    case-02/
+    case-03/
   docs/
+    requirements/
+    database/
+    architecture/
+    synthetic-data/
+    investigations/
+    testing/
+    dashboard/
+    development/
+    findings/
+    screenshots/
   scripts/
   .github/workflows/
   .env.example
@@ -30,9 +55,9 @@ InnoStaff/
   README.md
 ```
 
-Database scripts, generator code, and test entry points may start directly in their respective directories. All eight planning documents stay directly under docs/. The dashboard mockup is one companion HTML file. Do not create empty folder scaffolding for its own sake.
+Place each planning document in its named subfolder under docs/. Keep the dashboard design and HTML mockup together in docs/dashboard/. Database scripts, generator configuration/output, dashboard pages/components, and test fixtures/SQL/Python follow the subfolders shown above. Git does not track empty directories; create implementation folders as they are needed.
 
-Use descriptive numbered SQL filenames when execution order matters, such as database/001_reference_tables.sql. The setup script declares the complete order; do not depend on filesystem enumeration. Keep investigation filenames fixed as specified in the requirements.
+Use descriptive numbered SQL filenames when execution order matters, such as database/schema/001_reference_tables.sql. The setup script declares the complete order; do not depend on filesystem enumeration. Keep investigation filenames fixed as specified in the requirements.
 
 Ignore real .env files, generated datasets, local database volumes, virtual environments, Python caches, and temporary test output. Commit known-answer fixtures and selected benchmark evidence. No secrets belong in Git.
 
@@ -53,7 +78,7 @@ Introduce tests and a minimal CI workflow during steps 2–3. Extend them as tab
 
 ## First implementation sequence
 
-1. Place the planning files directly under docs/ and review the example worker journey against the ERD.
+1. Place the planning files in their corresponding subfolders under docs/ and review the example worker journey against the ERD.
 2. Establish a tested SQL Server container and a connection using the selected local SQL tool.
 3. Implement the first small group of reference tables, explaining their keys and constraints.
 4. Insert a few known valid records and demonstrate a rejected invalid reference.
@@ -92,4 +117,4 @@ The README begins with the fictional business problem and includes a real dashbo
 
 A read-only hosted demo is optional after local completion. Azure SQL can use smaller representative data if disclosed. Do not let hosting work expand the core scope or delay a complete local project.
 
-Completion uses the checklist in [Requirements and Acceptance Criteria](innostaff-requirements-and-acceptance-criteria.md). Update it with actual evidence links as implementation progresses. No milestone is marked complete simply because its plan exists.
+Completion uses the checklist in [Requirements and Acceptance Criteria](../requirements/innostaff-requirements-and-acceptance-criteria.md). Update it with actual evidence links as implementation progresses. No milestone is marked complete simply because its plan exists.
