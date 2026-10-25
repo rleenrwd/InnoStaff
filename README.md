@@ -23,7 +23,7 @@ All business records are fictional. Any later findings describe the synthetic da
 | [Dashboard Design](docs/dashboard/innostaff-dashboard-design.md) | Five pages, filters, chart contents, interaction rules |
 | [Development and Delivery Plan](docs/development/innostaff-development-and-delivery-plan.md) | Incremental implementation and release evidence |
 
-Open [Dashboard Mockups](docs/dashboard/innostaff-dashboard-mockups.html) locally in a browser to review all five layouts using the navigation links. The static mockups contain placeholders and illustrative chart shapes, not findings. GitHub may display the HTML source rather than render it.
+Open [Dashboard Mockups](docs/dashboard/innostaff-dashboard-mockup.html) locally in a browser to review all five layouts using the navigation links. The static mockups contain placeholders and illustrative chart shapes, not findings. GitHub may display the HTML source rather than render it.
 
 ## Planned stack and organization
 

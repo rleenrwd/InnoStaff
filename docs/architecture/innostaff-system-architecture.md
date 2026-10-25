@@ -12,13 +12,13 @@ The database is the analytical engine. Python is responsible for generation, orc
 
 ```mermaid
 flowchart TD
-    A["Fixed seed and generator configuration"] --> B["Python generator"]
-    B --> C["Generated records and manifest"]
-    C --> D["Validated SQL Server load"]
-    D --> E["SQL investigations and reporting objects"]
-    E --> F["Streamlit dashboard"]
-    E --> G["Findings and benchmark evidence"]
-    H["Fixtures and automated checks"] --> D
+    A["Seed and config"] --> B["Data generator"]
+    B --> C["Synthetic data"]
+    C --> D["SQL Server"]
+    D --> E["SQL analysis"]
+    E --> F["Dashboard"]
+    E --> G["Reports"]
+    H["Tests"] --> D
     H --> E
 ```
 
