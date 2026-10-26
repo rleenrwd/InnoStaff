@@ -1,0 +1,8 @@
+USE master;
+GO
+
+IF DB_ID(N'InnoStaff') IS NULL
+BEGIN
+    CREATE DATABASE InnoStaff;
+END;
+GO
