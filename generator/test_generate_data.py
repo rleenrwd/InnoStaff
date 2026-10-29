@@ -1,6 +1,7 @@
 import unittest
 
-from generate_data import generate_clients, generate_client_sites, validate_client_sites
+from generate_clients import generate_clients, generate_client_sites
+from validation import validate_client_sites
 
 
 class ClientSiteValidationTests(unittest.TestCase):
