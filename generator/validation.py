@@ -7,3 +7,13 @@ def validate_client_sites(clients, client_sites):
                 f"Site {site['ClientSiteId']} references "
                 f"nonexistent client {site['ClientId']}."
             )
+
+def validate_recruiters(branches, recruiters):
+    branch_ids = {branch["BranchId"] for branch in branches}
+
+    for recruiter in recruiters:
+        if recruiter["BranchId"] not in branch_ids:
+            raise ValueError(
+                f"Recruiter {recruiter['RecruiterId']} references "
+                f"nonexistent branch {recruiter['BranchId']}."
+            )
