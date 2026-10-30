@@ -37,10 +37,19 @@ def generate_client_sites(clients, seed):
         "Fremont",
     ]
 
+    if len(clients) < len(regions):
+        raise ValueError(
+            "Regional coverage requires at least seven clients "
+            "when generating one site per client."
+        )
+
     client_sites = []
 
     for site_id, client in enumerate(clients, start=1):
-        region = random_generator.choice(regions)
+        if site_id <= len(regions):
+            region = regions[site_id - 1]
+        else:
+            region = random_generator.choice(regions)
 
         site = {
             "ClientSiteId": site_id,
