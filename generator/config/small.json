@@ -1,0 +1,11 @@
+{
+    "profile": "small",
+    "seed": 41027,
+    "coverage_start": "2023-10-01",
+    "snapshot_date": "2026-09-30",
+    "worker_count": 250,
+    "placement_count": 600,
+    "attendance_target": 7500,
+    "client_count": 10,
+    "recruiters_per_branch": 2
+}
