@@ -51,3 +51,44 @@ def validate_workers(workers, coverage_start, snapshot_date):
 
         if not start_date <= registered_date <= end_date:
             raise ValueError(f"Worker {worker_id} has a registration date outside dataset coverage.")
+
+
+def validate_career_goals(workers, career_goals, snapshot_date):
+    workers_by_id = {worker["WorkerId"]: worker for worker in workers}
+
+    allowed_families = {
+        "Operations",
+        "Software",
+        "Network", 
+        "Systems",
+        "IT",
+        "Security",
+        "StableEmployment",
+        "Other",
+    }
+
+    end_date = date.fromisoformat(snapshot_date)
+    career_goal_ids = set()
+
+    for career_goal in career_goals:
+        career_goal_id = career_goal["CareerGoalId"]
+        worker_id = career_goal["WorkerId"]
+
+
+        if career_goal_id in career_goal_ids:
+            raise ValueError(f"Duplicate career goal ID: {career_goal_id}.")
+
+        career_goal_ids.add(career_goal_id)
+
+        if worker_id not in workers_by_id:
+            raise ValueError(f"Career goal {career_goal_id} references a nonexistent worker {worker_id}.")
+
+        if career_goal["GoalFamily"] not in allowed_families:
+            raise ValueError(f"Career goal {career_goal_id} has an invalid goal family.")
+
+        worker = workers_by_id[worker_id]
+        registered_date = date.fromisoformat(worker["RegisteredDate"])
+        recorded_date = date.fromisoformat(career_goal["RecordedDate"])
+
+        if not registered_date <= recorded_date <= end_date:
+            raise ValueError(f"Career goal {career_goal_id} has a recorded date before worker registration or after the snapshot.")
