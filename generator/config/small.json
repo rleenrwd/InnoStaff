@@ -8,5 +8,20 @@
     "attendance_target": 7500,
     "client_count": 10,
     "recruiters_per_branch": 2,
-    "initial_goal_probability": 0.75
+    "initial_goal_probability": 0.75,
+    "job_order_count": 30,
+    "hourly_wage_bands": {
+        "Entry": {
+            "minimum": 23,
+            "maximum": 38
+        },
+        "Intermediate": {
+            "minimum": 30,
+            "maximum": 55
+        },
+        "Experienced": {
+            "minimum": 45,
+            "maximum": 100
+        }
+    }
 }
