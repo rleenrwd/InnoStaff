@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 from generate_clients import generate_clients, generate_client_sites
-from validation import validate_client_sites, validate_recruiters, validate_workers, validate_career_goals, validate_job_orders
+from validation import validate_client_sites, validate_recruiters, validate_workers, validate_career_goals, validate_job_orders, validate_hiring_cohorts
 from export import write_csv
 from generate_job_roles import generate_job_roles
 from generate_branches import generate_branches
@@ -10,6 +10,7 @@ from generate_recruiters import generate_recruiters
 from generate_workers import generate_workers
 from generate_career_goals import generate_career_goals
 from generate_job_orders import generate_job_orders
+from generate_hiring_cohorts import generate_hiring_cohorts
 
 
 if __name__ == "__main__":
@@ -27,6 +28,8 @@ if __name__ == "__main__":
     workers = generate_workers(count=config["worker_count"], seed=config["seed"] + 2, coverage_start=config["coverage_start"], snapshot_date=config["snapshot_date"] )
     career_goals = generate_career_goals(workers, seed=config["seed"] + 3, initial_goal_probability=config["initial_goal_probability"])
     job_orders = generate_job_orders(client_sites, job_roles, recruiters, config, seed=config["seed"] + 4)
+    hiring_cohorts = generate_hiring_cohorts(job_orders, config, seed=config["seed"] + 5)
+    validate_hiring_cohorts(job_orders, hiring_cohorts, snapshot_date=config["snapshot_date"]),
 
 
     validate_client_sites(clients, client_sites)
@@ -43,7 +46,8 @@ if __name__ == "__main__":
         "Recruiters": recruiters,
         "Workers": workers,
         "CareerGoals": career_goals,
-        "JobOrders": job_orders
+        "JobOrders": job_orders,
+        "HiringCohorts": hiring_cohorts,
     }
 
     print(json.dumps(generated_data, indent=4))
@@ -52,6 +56,7 @@ if __name__ == "__main__":
     print("PASS: Worker IDs, codes, categories, and registration dates are valid.")
     print("PASS: Career goal IDs, worker references, families, and dates are valid.")
     print("PASS: Job order references, wages, hours, shifts, flags, and dates are valid.")
+    print("PASS: Hiring cohort IDs, codes, order references, and dates are valid.")
 
     output_directory = Path(__file__).resolve().parent / "output"
 
@@ -63,5 +68,6 @@ if __name__ == "__main__":
     write_csv(workers, output_directory / "Workers.csv")
     write_csv(career_goals, output_directory / "CareerGoals.csv")
     write_csv(job_orders, output_directory / "JobOrders.csv")
+    write_csv(hiring_cohorts, output_directory / "HiringCohorts.csv")
 
     print(f"CSV files exported to: {output_directory}")

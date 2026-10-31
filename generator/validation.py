@@ -187,3 +187,61 @@ def validate_job_orders(client_sites, job_roles, recruiters, job_orders, config)
                 raise ValueError(
                     f"Job order {job_order_id} has an invalid closing date."
                 )
+
+
+def validate_hiring_cohorts(job_orders, hiring_cohorts, snapshot_date):
+    orders_by_id = {
+        job_order["JobOrderId"]: job_order
+        for job_order in job_orders
+    }
+
+    end_date = date.fromisoformat(snapshot_date)
+    cohort_ids = set()
+    cohort_codes = set()
+    order_start_dates = set()
+
+    for cohort in hiring_cohorts:
+        cohort_id = cohort["HiringCohortId"]
+        cohort_code = cohort["CohortCode"]
+        job_order_id = cohort["JobOrderId"]
+
+        if cohort_id in cohort_ids:
+            raise ValueError(f"Duplicate hiring cohort ID: {cohort_id}.")
+
+        if cohort_code in cohort_codes:
+            raise ValueError(f"Duplicate hiring cohort code: {cohort_code}.")
+
+        cohort_ids.add(cohort_id)
+        cohort_codes.add(cohort_code)
+
+        if job_order_id not in orders_by_id:
+            raise ValueError(
+                f"Hiring cohort {cohort_id} references a nonexistent job order."
+            )
+
+        job_order = orders_by_id[job_order_id]
+        open_date = date.fromisoformat(job_order["OpenDate"])
+        start_date = date.fromisoformat(cohort["CohortStartDate"])
+
+        if not open_date <= start_date <= end_date:
+            raise ValueError(
+                f"Hiring cohort {cohort_id} starts before order opening "
+                "or after the snapshot."
+            )
+
+        if job_order["CloseDate"] is not None:
+            close_date = date.fromisoformat(job_order["CloseDate"])
+
+            if start_date >= close_date:
+                raise ValueError(
+                    f"Hiring cohort {cohort_id} starts on or after order closing."
+                )
+
+        order_start = (job_order_id, start_date)
+
+        if order_start in order_start_dates:
+            raise ValueError(
+                f"Hiring cohort {cohort_id} repeats an order/start-date pair."
+            )
+
+        order_start_dates.add(order_start)

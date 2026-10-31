@@ -23,5 +23,7 @@
             "minimum": 45,
             "maximum": 100
         }
-    }
+    },
+    "minimum_cohorts_per_order": 1,
+    "maximum_cohorts_per_order": 3
 }
